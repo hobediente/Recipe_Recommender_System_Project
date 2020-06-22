@@ -4,7 +4,7 @@ Build a recipe reccomender system that recommends recipes based on nutrition met
 
 Maintaining good eating habits is one of the best things a person can do for their wallet and health. Each year diabetes costs Americans $327 billion in medical fees and lost work and wages. Moreover, it is the 7th leading cause of death in America. More than 88 million US adults have Prediabetes-the precursor to diabetes 2,  which through lifestyle changes can be reversed. The goal of this project is to build a recipe reccomender system that helps people be more nutrition conscious with less effort.
  
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/LuxcoLogo-ad-1020x372.png" width="500" height="200"></img>
+<img src="Images/Fruit Banner.jpg"></img>
 
 # DATA:
 
