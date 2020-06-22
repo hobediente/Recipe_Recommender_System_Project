@@ -9,9 +9,9 @@ Maintaining good eating habits is one of the best things a person can do for the
 # DATA:
 
 The data for this project is sourced from two places
-1) Recipes - Kaggle (https://console.cloud.google.com/marketplace/details/iowa-department-of-commerce/iowa-liquor-sales) - Each recipe name is tokenized then later used as input for API calls.
+1) Recipes - Kaggle (https://www.kaggle.com/hugodarwood/epirecipes) - Each recipe name is tokenized then later used as input for API calls.
 
-2) Recipes - Edamam API (https://data.iowa.gov/) - Each observation is a recipe that has 28 measures for nutrition metrics, and other staple recipe information i.e. cook time.
+2) Recipes - Edamam API (https://developer.edamam.com/edamam-recipe-api) - Each observation is a recipe that has 28 measures for nutrition metrics, and other staple recipe information i.e. cook time.
 
 # DATA ANALYSIS:
 
@@ -25,7 +25,7 @@ In this step recipe features are explored and visualized.
 In this step NLP cleaning of recipes takes place.
 
 # 4. Modeling Sales:
-In this step I build a system that reccomends recipes from my dataset that come closest to the desired nutrition meterics and ingredient specified by users.
+In this step I build a system that reccomends recipes from my dataset that come closest to the desired nutrition meterics and ingredients specified by users.
 
 ### *For results, limitations, and takeaways scroll to bottom*
 
@@ -34,23 +34,24 @@ In this step I build a system that reccomends recipes from my dataset that come 
 # Data Collection 
 
 **Step 1 : Selecting the data**
-The following steps were preformed using Google BigQuery
+The following steps were preformed using Python functionalities
 
-- Identify top distributers in Iowa Liquor Sales dataset
-- Audit top distributers by the variety of alcohol they sell
-- Select a top distributer that sells a wide variety of alcohol -- Luxico Inc-- and subset data for years 2017-2018 
+- Load Kaggle Dataset
+- Explore the data and realize it's not the right data to use as the basis of the reccomender system
+- Go looking for better data and find Edamam Recipe API
 
-- Select county-level demographic data for years 2017-2018
+- Tokenize Kaggle recipe names for 1 and 2 grams
+- Use Kaggle recipe tokens as input for API Calls 
+- Make single call 
+- Automate remaining calls then store and download each call as a CSV file
 
-- Select county-level education data for years 2017-2018
-
-### Conclusion: There are 99 counties in Iowa. Luxico Inc is the second largest distributer in Iowa, and sells 34 different categories of alcohol. 
+### Conclusion: Queried Edamam Recipe API 230 times and collected 22686 recipes. 
 
 **Step 2 : Aggregating the data**
 The following steps were preformed using Python functionalities
 
 - Clean the data
-- Combine liquor invoice, demographic, and education CSV sheets on county name
+- Concat CSV sheets creating one DF
 
 **Step 3 : Feature Engineering**
 The following steps were preformed using Pandas
