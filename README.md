@@ -45,7 +45,7 @@ The following steps were preformed using Python functionalities
 - Make single call 
 - Automate remaining calls then store and download each call as a CSV file
 
-### Conclusion: Queried Edamam Recipe API 230 times and collected 22686 recipes. 
+### Conclusion: Queried Edamam Recipe API 230 times and collected 22,686 recipes. 
 
 **Step 2 : Aggregating the data**
 The following steps were preformed using Python functionalities
@@ -53,14 +53,14 @@ The following steps were preformed using Python functionalities
 - Clean the data
 - Concat CSV sheets creating one DF
 
-**Step 3 : Feature Engineering**
+***image***
+
+**Step 3 : Cleaning df**
 The following steps were preformed using Pandas
 
-- Create columns for...
-   * The total educated population under the age of 25
-   * The percent of population under the age of 25
-   * The percent of population over 25
-   * The percent of the population that is of drinking age
+- Drop insignificant columns
+- Rename columns of interest
+- Drop remaining obsolete columns 
  
  - The df 
  <img src="Images/df.png"></img>
@@ -68,72 +68,67 @@ The following steps were preformed using Pandas
 # Exploratory Analysis
 - I divide the analysis into the following parts:
 
-**A) Yearly Analysis**: Sales per category, sales per county, sales per bottle volume
+**A) Shape Analysis**: distribution, outliers
 
-**B) Monthly Analysis**: Total sales, sales per category
+**B) Label Analysis**: diet labels, health labels
 
-**C) Customer Analysis**: Analyzing relationship between population demographics and sales per county. 
+**C) Source Analysis**: id recipe sources and frequency
 
-**D) Predicting Sales**: Using demographic and sales data from 2017 to predict yearly sales per county for 2018.
 
-# A) Yearly Analysis :
-**Step 1 : Exploring the data**
+# A) Shape Analysis :
+**Step 1 : Explore distributions**
 The following steps are preformed using pandas functionalities
 
-- Examine volume of liqour sold in gallons grouped by category
-- Examine volume of liquor sold in gallons grouped by county
-- Examine volume of liquor sold in gallons grouped by bottle size 
+- Plot histograms
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
 
-# A) Yearly Analysis :
-**Step 2 : Visualizing the data**
+### Conclusion: American Vodkas account for nearly half of all sales
+
+
+# A) Shape Analysis :
+**Step 2 : Explore outliers**
 
 In this step, I visualize the previous findings using plotly.express 
+
+- Plot boxplots
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img> 
+
+### Conclusion: American Vodkas account for nearly half of all sales
+
+
+# A) Shape Analysis :
+**Step 3 : Get overview of data**
+
+- Create Pandas Profiling report 
 
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
 
 ### Conclusion: American Vodkas account for nearly half of all sales
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_County.png"></img>
+# B) Label Analysis :
+**Step 1 : Analyze diet labels**
 
-### Conclusion: Ten out of ninety-nine counties account for over sixty percent of sales
+In this step, I explore and visualize diet labels using seaborn
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Bottle_Size.png"></img>
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
 
-### Conclusion: 1750ml, 1000ml, and 750ml the dominate size of bottles sold
+# B) Label Analysis :
+**Step 2 : Analyze health labels**
 
-# B) Monthly Analysis :
-**Step 1 : Exploring the data**
-
-In this step, I preformed the following using pandas functionalities
-- Examine total sales per month
-- Examine total sales per month by category of alcohol 
-
-
-# B) Monthly Analysis :
-**Step 2 : Visualizing the data**
-
-In this step, I visualized the previous findings using seaborn
-
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2017_Sales_Over_Time.png" width="600" height="300"></img>
-
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Sales_Over_Time.png" width="600" height="300"></img>
-
-### Conclusion: Sales appear to spike in even numbered months and fall in odd numbered months.
-
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2017_Category_Sales.png" width="740" height="300"></img>
+In this step, I explore and visualize diet labels using seaborn
 
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
 
 ### Conclusion: Certain categories of alcohol appear to be seasonaly ordered i.e. mixto tequila, while others show more consistency. 
 
-# C) Customer Analysis :
+# C) Source Analysis :
 **Step 1 : Exploring the data**
 In this step, I preformed the following using pandas functionalities
 
 - Group DataFrame by county, summing for the total amount of liquor sold in gallons, and taking the mode for relevant population statics
 - Examine the relationship between population demographics per county and sales
 
-# C) Customer Analysis :
+# C) Source Analysis :
 **Step 2 : Visualizing the data**
 
 In this step, I visualized the previous findings using ploty.express
