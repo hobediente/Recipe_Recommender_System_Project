@@ -18,13 +18,16 @@ The data for this project is sourced from two places
 # 1. Data Collection:
 In this step I collect, synthesize, and store recipe data.
 
-# 2. Exploratory Analysis:
+# 2. Data Cleaning:
+In this step I clean columns, handle nulls, and scale
+
+# 3. Exploratory Analysis:
 In this step recipe features are explored and visualized.
 
-# 3. Data Cleaning:
+# 4. More Data Cleaning:
 In this step NLP cleaning of recipes takes place.
 
-# 4. Modeling Sales:
+# 5. Modeling Sales:
 In this step I build a system that reccomends recipes from my dataset that come closest to the desired nutrition meterics and ingredients specified by users.
 
 ### *For results, limitations, and takeaways scroll to bottom*
@@ -32,38 +35,41 @@ In this step I build a system that reccomends recipes from my dataset that come 
 -----------------------------------------------------------------------------------------------------------
 
 # Data Collection 
-
-**Step 1 : Selecting the data**
 The following steps were preformed using Python functionalities
 
 - Load Kaggle Dataset
-- Explore the data and realize it's not the right data to use as the basis of the reccomender system
-- Go looking for better data and find Edamam Recipe API
-
-- Tokenize Kaggle recipe names for 1 and 2 grams
-- Use Kaggle recipe tokens as input for API Calls 
-- Make single call 
-- Automate remaining calls then store and download each call as a CSV file
-
-### Conclusion: Queried Edamam Recipe API 230 times and collected 22,686 recipes. 
-
-**Step 2 : Aggregating the data**
-The following steps were preformed using Python functionalities
-
-- Clean the data
-- Concat CSV sheets creating one DF
+- Tokenize recipe names for 1 and 2 grams
+- Get most common words 
+- Store select words in a list
+- Input a word from the list to make a single API call 
+- Automate calls for remaining words then store and download each call as a CSV file
+- Join CSV sheets into one master DF
 
 ***image***
 
-**Step 3 : Cleaning df**
+### Conclusion: Queried Edamam Recipe API 230 times and collected 22,686 recipes. 
+
+
+# 2. Data Cleaning:
+**Step 1 : Clean columns**
 The following steps were preformed using Pandas
 
-- Drop insignificant columns
+- Drop "unamed", "bookmarked", and "bought" columns
+- Use regex to drop columns that have "unit" and "label" in the title
 - Rename columns of interest
 - Drop remaining obsolete columns 
+- Add column "q" the retains the word used to query each recipe
  
- - The df 
+- The df 
  <img src="Images/df.png"></img>
+ 
+**Step 2 : Handle nulls**
+- Drop "Added_Sugar(g)" because 73% is missing and the information is embedded in "Sugar(g)" column
+- Fill "Trans_Fat(g)" nulls with the remainder of subtracting monounsaturated, saturated, and polyunsarturated fat columns from "Fat(g)"
+- Of the vitamin columns containing nulls less than .5% of entries are missing so fill with 0
+
+**Step 3 : Scale**
+- standardize nutrition metrics for serving size of 2 
  
 # Exploratory Analysis
 - I divide the analysis into the following parts:
