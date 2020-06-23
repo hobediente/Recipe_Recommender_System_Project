@@ -149,26 +149,70 @@ In this step, I preformed the following using pandas functionalities
 
 In this step, I visualized the previous findings using ploty.express
 
-<img src="Images/word_cloud.png"></img>
+<img src="Images/word_cloud.png" width="700" height="400"></img>
 
 ### Conclusion: Sales are highly correlated to the percent of educated population under 25.
 
 # 4. NLP Cleaning:
 The following steps use NLP to clean recipe ingredients and were preformed using Pandas
 
+- Starting point
+   * '1/4 oz dried wild mushrooms, such as chanterelles, porcini or shiitakes',
+     '1 cup boiling water',
+     '2 tbs unsalted butter',
+     '3/4 cup sliced green onions',
+     '1 x garlic clove, minced',
+     '1/2 tsp chopped fresh rosemary',
+     '1/2 tsp chopped fresh thyme',
+     '1/2 lb assorted fresh wild mushrooms, such as chanterelles, porcini and shiitakes, brushed clean and chopped small',
+     '1/2 lb fresh button mushrooms, brushed clean and chopped small',
+     '5 oz blue cheese crumbles',
+     '1/2 tsp Salt and pepper to taste'
 - Remove all words after first comma 
+    * 1/4 oz dried wild mushrooms
+      1 cup boiling water
+      2 tbs unsalted butter
+      3/4 cup sliced green onions
+      1 x garlic clove
+      1/2 tsp chopped fresh rosemary
+      1/2 tsp chopped fresh thyme
+      1/2 lb assorted fresh wild mushrooms
+      1/2 lb fresh button mushrooms
+      5 oz blue cheese crumbles
+      1/2 tsp Salt and pepper to taste
 - Define list of ingredient amounts and noise words
 - Remove all words in list and words that are not .isalpha()
+    * 'dried wild mushrooms 
+       boiling water 
+       unsalted butter 
+       sliced green onions 
+       garlic 
+       chopped rosemary 
+       chopped thyme 
+       wild mushrooms 
+       button mushrooms 
+       blue cheese crumbles 
+       Salt and pepper'
 - Remove all adverbs and past tense, present participle, and past participle verbs; lemnmatize
+    * 'wild mushroom 
+       water 
+       unsalted butter 
+       green onion 
+       garlic 
+       rosemary 
+       thyme 
+       wild mushroom 
+       button mushroom 
+       blue cheese crumbles 
+       salt and pepper'
  
-
 # 5. Reccomender System:
 
 **Step 1 : Build Model**
 - Filter out recipes containing ingredients user is allergic to (if specified)
 - Scale for serving size 
 - Subset columns user specified input for
-- Vectorize subset of columns for master df 
+- Vectorize subset of columns for master df (remove stop words and words that occur only once)
 - Define nearest neighbor
 - Vectorize users' seach input
 - Return nearest neighbors to users' search
