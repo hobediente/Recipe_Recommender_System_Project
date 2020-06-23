@@ -123,7 +123,7 @@ In this step, I explore and visualize diet labels using plotly and seaborn
 
 ### Conclusion: Most recipes have no diet labels; ['High-Protien', 'Low-Carb'] tags are often used together. 
 
-<img src="Images/Diet_labels.png" width="500" height="300"></img>
+<img src="Images/Diet_labels.png" width="800" height="400"></img>
 
 
 ### Conclusion: 'Low-Carb' is the most frequently occuring diet label, and 'High-Protien' is the least frequently occuring diet label. 
