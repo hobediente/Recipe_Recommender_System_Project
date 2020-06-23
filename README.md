@@ -34,7 +34,7 @@ In this step I build a system that reccomends recipes from my dataset that come 
 
 -----------------------------------------------------------------------------------------------------------
 
-# Data Collection 
+# 1. Data Collection 
 The following steps were preformed using Python functionalities
 
 - Load Kaggle Dataset
