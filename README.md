@@ -63,7 +63,7 @@ The following steps were preformed using Pandas
 - Add column "q" the retains the word used to query each recipe
  
 - The df 
-<img src="Images/post_cleaning.png"></img>
+<img src="Images/post_cleaning.png" height="400"></img>
  
 **Step 2 : Handle nulls**
 - Drop "Added_Sugar(g)" because 73% is missing and the information is embedded in "Sugar(g)" column
@@ -88,7 +88,7 @@ The following steps were preformed using Pandas
 The following steps are preformed using pandas functionalities
 
 - Plot histograms
-<img src="Images/distributions.png"></img>
+<img src="Images/distributions.png" height="400"></img>
 
 ### Conclusion: Distributions are not normal.
 
