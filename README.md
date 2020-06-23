@@ -30,7 +30,8 @@ In this step NLP cleaning of recipes takes place.
 # 5. Reccomender System:
 In this step I build a system that reccomends recipes from my dataset that come closest to the desired nutrition meterics and ingredients specified by users.
 
-### *For results, limitations, and takeaways scroll to bottom*
+### *For results, takeaways and next steps scroll to bottom*
+### *Notebook available on case-by-case basis*
 
 -----------------------------------------------------------------------------------------------------------
 
