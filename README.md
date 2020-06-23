@@ -158,35 +158,41 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Remove all adverbs and past tense, present participle, and past participle verbs; lemnmatize
  
 
-# 5. Build Reccomender System:
+# 5. Reccomender System:
 
-**Step 1 : Selecting Model**
-- Run random forest
-- Run XGboost
+**Step 1 : Build Model**
+- Filter out recipes containing ingredients user is allergic to (if specified)
+- Scale for serving size 
+- Subset columns user specified input for
+- Vectorize subset of columns for master df 
+- Define nearest neighbor
+- Vectorize users' seach input
+- Return nearest neighbors to users' search
 
-**Step 2 : Tuning Models**
-- Get feature importances
-- Rerun models with only important features
-- Run GridSearchCV to hypertune parameters
-- Rerun models with hypertuned parameters
+**Step 2 : Test different vectorizers**
+- TF-IDF
+- BOW 
 
 **Step 3 : Select Best Model**
-- Compare goodness of model meterics and select best model
-  * MAE, MSE, RMSE, MAPE
+- Compare recipe returns and select best model
   
 -----------------------------------------------------------------------------------------------------------
 
-# Model Results :
-- XGboost is the best preforming model 
-- With input features of category, percent population with an education, and percent population under 25 the model achieved..
+# BOW Model Results :
+- HOEM distance meteric
   * Training Score: 0.999, Test Score: 0.996
   * RMSE: 17357.78 (0.09% of total sales)
+- Cosine distance meteric 
+  * Training Score: 0.999, Test Score: 0.996
+  * RMSE: 17357.78 (0.09% of total sales)
+- Minkowski distance meteric
   
 # Analysis Takeaways :
-- Focus advertising resources on counties that bring in the most money
-- Advertise for seasonal liquor at the beginning of their respective seasons
-- Strengthen advertising to and around college campuses
+- Cosine: good for returning similar ingredient(s) input
+- Minkowski: good for returning recipes with similar nutrition input
+- HEOM (works like FAMD): takes significantly longer time to run, but serves as a decent median between cosine and minkowski distances
 
-# Limitations :
-- I conducted this project before learning about techniques and models associated with time-series data
-  * Moving forward I would check for seasonality and trends in sales, segment sales into quarters, engineer lag and window   features, then build new models to predict yearly sales based on first quarter sales. 
+# Going Foward :
+- Run and test more queries with different distance metrics
+- Add more recipes to df (esp. 'High-Protien')
+- Explore deploying with Flask
