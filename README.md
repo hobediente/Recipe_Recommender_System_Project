@@ -157,54 +157,59 @@ In this step, I visualized the previous findings using ploty.express
 The following steps use NLP to clean recipe ingredients and were preformed using Pandas
 
 - Starting point
-   * '1/4 oz dried wild mushrooms, such as chanterelles, porcini or shiitakes',
-     '1 cup boiling water',
-     '2 tbs unsalted butter',
-     '3/4 cup sliced green onions',
-     '1 x garlic clove, minced',
-     '1/2 tsp chopped fresh rosemary',
-     '1/2 tsp chopped fresh thyme',
-     '1/2 lb assorted fresh wild mushrooms, such as chanterelles, porcini and shiitakes, brushed clean and chopped small',
-     '1/2 lb fresh button mushrooms, brushed clean and chopped small',
-     '5 oz blue cheese crumbles',
-     '1/2 tsp Salt and pepper to taste'
+
+      * '1/4 oz dried wild mushrooms, such as chanterelles, porcini or shiitakes',
+      * '1 cup boiling water',
+      * '2 tbs unsalted butter', 
+      * '3/4 cup sliced green onions',
+      * '1 x garlic clove, minced',
+      * '1/2 tsp chopped fresh rosemary',
+      * '1/2 tsp chopped fresh thyme',
+      * '1/2 lb assorted fresh wild mushrooms, such as chanterelles, porcini and shiitakes, brushed clean and chopped small',
+      * '1/2 lb fresh button mushrooms, brushed clean and chopped small',
+      * '5 oz blue cheese crumbles',
+      * '1/2 tsp Salt and pepper to taste'
+      
 - Remove all words after first comma 
-    * 1/4 oz dried wild mushrooms
-      1 cup boiling water
-      2 tbs unsalted butter
-      3/4 cup sliced green onions
-      1 x garlic clove
-      1/2 tsp chopped fresh rosemary
-      1/2 tsp chopped fresh thyme
-      1/2 lb assorted fresh wild mushrooms
-      1/2 lb fresh button mushrooms
-      5 oz blue cheese crumbles
-      1/2 tsp Salt and pepper to taste
+
+      * 1/4 oz dried wild mushrooms
+      * 1 cup boiling water
+      * 2 tbs unsalted butter
+      * 3/4 cup sliced green onions
+      * 1 x garlic clove
+      * 1/2 tsp chopped fresh rosemary
+      * 1/2 tsp chopped fresh thyme
+      * 1/2 lb assorted fresh wild mushrooms
+      * 1/2 lb fresh button mushrooms
+      * 5 oz blue cheese crumbles
+      * 1/2 tsp Salt and pepper to taste
 - Define list of ingredient amounts and noise words
 - Remove all words in list and words that are not .isalpha()
-    * 'dried wild mushrooms 
-       boiling water 
-       unsalted butter 
-       sliced green onions 
-       garlic 
-       chopped rosemary 
-       chopped thyme 
-       wild mushrooms 
-       button mushrooms 
-       blue cheese crumbles 
-       Salt and pepper'
+   
+      * 'dried wild mushrooms 
+      * boiling water 
+      * unsalted butter 
+      * sliced green onions 
+      * garlic 
+      * chopped rosemary 
+      * chopped thyme 
+      * wild mushrooms 
+      * button mushrooms 
+      * blue cheese  
+      * Salt and pepper'
 - Remove all adverbs and past tense, present participle, and past participle verbs; lemnmatize
-    * 'wild mushroom 
-       water 
-       unsalted butter 
-       green onion 
-       garlic 
-       rosemary 
-       thyme 
-       wild mushroom 
-       button mushroom 
-       blue cheese crumbles 
-       salt and pepper'
+      
+      * 'wild mushroom 
+      * water 
+      * unsalted butter 
+      * green onion 
+      * garlic 
+      * rosemary 
+      * thyme 
+      * wild mushroom 
+      * button mushroom 
+      * blue cheese
+      * salt and pepper'
  
 # 5. Reccomender System:
 
