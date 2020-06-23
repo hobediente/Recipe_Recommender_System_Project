@@ -71,7 +71,7 @@ The following steps were preformed using Pandas
 **Step 3 : Scale**
 - standardize nutrition metrics for serving size of 2 
  
-# Exploratory Analysis
+# 3. Exploratory Analysis
 - I divide the analysis into the following parts:
 
 **A) Shape Analysis**: distribution, outliers
@@ -81,17 +81,17 @@ The following steps were preformed using Pandas
 **C) Source Analysis**: id recipe sources and frequency
 
 
-# A) Shape Analysis :
+## A) Shape Analysis :
 **Step 1 : Explore distributions**
 The following steps are preformed using pandas functionalities
 
 - Plot histograms
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
 
-### Conclusion: American Vodkas account for nearly half of all sales
+### Conclusion: Distributions are not normal.
 
 
-# A) Shape Analysis :
+## A) Shape Analysis :
 **Step 2 : Explore outliers**
 
 In this step, I visualize the previous findings using plotly.express 
@@ -99,11 +99,11 @@ In this step, I visualize the previous findings using plotly.express
 - Plot boxplots
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img> 
 
-### Conclusion: American Vodkas account for nearly half of all sales
+### Conclusion: All metrics have outliers.
 
 
-# A) Shape Analysis :
-**Step 3 : Get overview of data**
+## A) Shape Analysis :
+**Step 3 : Compile overview of data**
 
 - Create Pandas Profiling report 
 
@@ -111,30 +111,36 @@ In this step, I visualize the previous findings using plotly.express
 
 ### Conclusion: American Vodkas account for nearly half of all sales
 
-# B) Label Analysis :
+## B) Label Analysis :
 **Step 1 : Analyze diet labels**
 
-In this step, I explore and visualize diet labels using seaborn
+In this step, I explore and visualize diet labels using plotly and seaborn
 
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
 
-# B) Label Analysis :
+### Conclusion: Most recipes have no diet labels; ['High-Protien', 'Low-Carb'] tags are often used together. 
+
+<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
+
+### Conclusion: 'Low-Carb' is the most frequently occuring diet label, and 'High-Protien' is the least frequently occuring diet label. 
+
+## B) Label Analysis :
 **Step 2 : Analyze health labels**
 
 In this step, I explore and visualize diet labels using seaborn
 
 <img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
 
-### Conclusion: Certain categories of alcohol appear to be seasonaly ordered i.e. mixto tequila, while others show more consistency. 
+### Conclusion: 'Alcohol-Free', 'Peanut-Free', and 'Tree-Nut-Free' are the most frequently occuring diet labels. 
 
-# C) Source Analysis :
+## C) Source Analysis :
 **Step 1 : Exploring the data**
 In this step, I preformed the following using pandas functionalities
 
 - Group DataFrame by county, summing for the total amount of liquor sold in gallons, and taking the mode for relevant population statics
 - Examine the relationship between population demographics per county and sales
 
-# C) Source Analysis :
+## C) Source Analysis :
 **Step 2 : Visualizing the data**
 
 In this step, I visualized the previous findings using ploty.express
