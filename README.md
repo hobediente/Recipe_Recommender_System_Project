@@ -253,4 +253,7 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Add more recipes to df (esp. 'High-Protien')
 - Explore deploying with Flask
 
-* For more about HEOM meteric visit https://towardsdatascience.com/the-proper-way-of-handling-mixed-type-data-state-of-the-art-distance-metrics-505eda236400
+-----------------------------------------------------------------------------------------------------------
+
+* For more about HEOM meteric visit 
+https://towardsdatascience.com/the-proper-way-of-handling-mixed-type-data-state-of-the-art-distance-metrics-505eda236400
