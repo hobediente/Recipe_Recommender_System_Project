@@ -47,7 +47,7 @@ The following steps were preformed using Python functionalities
 - Automate calls for remaining words then store and download each call as a CSV file
 - Join CSV sheets into one master DF
 
-***image***
+<img src="Images/pre_cleaning.png"></img>
 
 ### Conclusion: Queried Edamam Recipe API 230 times and collected 22,686 recipes. 
 
@@ -63,7 +63,7 @@ The following steps were preformed using Pandas
 - Add column "q" the retains the word used to query each recipe
  
 - The df 
- <img src="Images/df.png"></img>
+<img src="Images/post_cleaning.png"></img>
  
 **Step 2 : Handle nulls**
 - Drop "Added_Sugar(g)" because 73% is missing and the information is embedded in "Sugar(g)" column
@@ -88,7 +88,7 @@ The following steps were preformed using Pandas
 The following steps are preformed using pandas functionalities
 
 - Plot histograms
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+<img src="Images/distributions.png"></img>
 
 ### Conclusion: Distributions are not normal.
 
@@ -99,7 +99,7 @@ The following steps are preformed using pandas functionalities
 In this step, I visualize the previous findings using plotly.express 
 
 - Plot boxplots
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img> 
+<img src="Images/outliers.png"></img>
 
 ### Conclusion: All metrics have outliers.
 
@@ -109,7 +109,7 @@ In this step, I visualize the previous findings using plotly.express
 
 - Create Pandas Profiling report 
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/Gallons_per_Category.png"></img>
+<img src="Images/pandas_profiling.png"></img>
 
 ### Conclusion: American Vodkas account for nearly half of all sales
 
@@ -118,12 +118,12 @@ In this step, I visualize the previous findings using plotly.express
 
 In this step, I explore and visualize diet labels using plotly and seaborn
 
-<img src="Images/Diet_labels.png"></img>
+<img src="Images/Diet_labels_pie.png"></img>
 
 
 ### Conclusion: Most recipes have no diet labels; ['High-Protien', 'Low-Carb'] tags are often used together. 
 
-<img src="Images/Diet_labels_pie.png"></img>
+<img src="Images/Diet_labels.png"></img>
 
 
 ### Conclusion: 'Low-Carb' is the most frequently occuring diet label, and 'High-Protien' is the least frequently occuring diet label. 
@@ -149,7 +149,7 @@ In this step, I preformed the following using pandas functionalities
 
 In this step, I visualized the previous findings using ploty.express
 
-<img src="Images/Pop_Stats_and_Sales.png" width="600" height="600"></img>
+<img src="Images/word_cloud.png" width="600" height="600"></img>
 
 ### Conclusion: Sales are highly correlated to the percent of educated population under 25.
 
