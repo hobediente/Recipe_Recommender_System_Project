@@ -233,7 +233,7 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 -----------------------------------------------------------------------------------------------------------
 
 # BOW Model Results :
-- Heterogeneous Euclidean-Overlap Metric (HEOM) distance meteric
+- Heterogeneous Euclidean-Overlap Metric (HEOM)* distance meteric
   * 243.13645887374878 seconds
   * <img src="Images/heom.png"></img>
 - Cosine distance meteric 
@@ -252,3 +252,5 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Run and test more queries with different distance metrics
 - Add more recipes to df (esp. 'High-Protien')
 - Explore deploying with Flask
+
+* For more about HEOM meteric visit https://towardsdatascience.com/the-proper-way-of-handling-mixed-type-data-state-of-the-art-distance-metrics-505eda236400
