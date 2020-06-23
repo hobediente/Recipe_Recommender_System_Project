@@ -186,7 +186,7 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Define list of ingredient amounts and noise words
 - Remove all words in list and words that are not .isalpha()
    
-      * 'dried wild mushrooms 
+      * dried wild mushrooms 
       * boiling water 
       * unsalted butter 
       * sliced green onions 
@@ -196,10 +196,10 @@ The following steps use NLP to clean recipe ingredients and were preformed using
       * wild mushrooms 
       * button mushrooms 
       * blue cheese  
-      * Salt and pepper'
+      * Salt and pepper
 - Remove all adverbs and past tense, present participle, and past participle verbs; lemnmatize
       
-      * 'wild mushroom 
+      * wild mushroom 
       * water 
       * unsalted butter 
       * green onion 
@@ -209,7 +209,7 @@ The following steps use NLP to clean recipe ingredients and were preformed using
       * wild mushroom 
       * button mushroom 
       * blue cheese
-      * salt and pepper'
+      * salt and pepper
  
 # 5. Reccomender System:
 
@@ -234,13 +234,13 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 # BOW Model Results :
 - Heterogeneous Euclidean-Overlap Metric (HEOM) distance meteric
   * 243.13645887374878 seconds
-  * 
+  * <img src="Images/heom.png"></img>
 - Cosine distance meteric 
   * 30.86256217956543 seconds
-  * 
+  * <img src="Images/cosine.png"></img>
 - Minkowski distance meteric
   * 41.62085938453674 seconds
-  * 
+  * <img src="Images/minkowski.png"></img>
   
 # Analysis Takeaways :
 - Cosine: good for returning similar ingredient(s) input
