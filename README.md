@@ -88,7 +88,7 @@ The following steps were preformed using Pandas
 The following steps are preformed using pandas functionalities
 
 - Plot histograms
-<img src="Images/distributions.png" height="400"></img>
+<img src="Images/distributions.png"></img>
 
 ### Conclusion: Distributions are not normal.
 
