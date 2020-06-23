@@ -232,13 +232,15 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 -----------------------------------------------------------------------------------------------------------
 
 # BOW Model Results :
-- HOEM distance meteric
-  * Training Score: 0.999, Test Score: 0.996
-  * RMSE: 17357.78 (0.09% of total sales)
+- Heterogeneous Euclidean-Overlap Metric (HEOM) distance meteric
+  * 243.13645887374878 seconds
+  * 
 - Cosine distance meteric 
-  * Training Score: 0.999, Test Score: 0.996
-  * RMSE: 17357.78 (0.09% of total sales)
+  * 30.86256217956543 seconds
+  * 
 - Minkowski distance meteric
+  * 41.62085938453674 seconds
+  * 
   
 # Analysis Takeaways :
 - Cosine: good for returning similar ingredient(s) input
@@ -249,5 +251,3 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Run and test more queries with different distance metrics
 - Add more recipes to df (esp. 'High-Protien')
 - Explore deploying with Flask
-
-width="740" height="300"
