@@ -47,7 +47,7 @@ The following steps were preformed using Python functionalities
 - Automate calls for remaining words then store and download each call as a CSV file
 - Join CSV sheets into one master DF
 
-<img src="Images/pre_cleaning.png"></img>
+<img src="Images/pre_cleaning.png" height="300"></img>
 
 ### Conclusion: Queried Edamam Recipe API 230 times and collected 22,686 recipes. 
 
@@ -63,7 +63,7 @@ The following steps were preformed using Pandas
 - Add column "q" the retains the word used to query each recipe
  
 - The df 
-<img src="Images/post_cleaning.png" height="400"></img>
+<img src="Images/post_cleaning.png" height="300"></img>
  
 **Step 2 : Handle nulls**
 - Drop "Added_Sugar(g)" because 73% is missing and the information is embedded in "Sugar(g)" column
