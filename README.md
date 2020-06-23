@@ -24,10 +24,10 @@ In this step I clean columns, handle nulls, and scale
 # 3. Exploratory Analysis:
 In this step recipe features are explored and visualized.
 
-# 4. More Data Cleaning:
+# 4. NLP Cleaning:
 In this step NLP cleaning of recipes takes place.
 
-# 5. Modeling Sales:
+# 5. Reccomender System:
 In this step I build a system that reccomends recipes from my dataset that come closest to the desired nutrition meterics and ingredients specified by users.
 
 ### *For results, limitations, and takeaways scroll to bottom*
@@ -149,8 +149,16 @@ In this step, I visualized the previous findings using ploty.express
 
 ### Conclusion: Sales are highly correlated to the percent of educated population under 25.
 
+# 4. NLP Cleaning:
+The following steps use NLP to clean recipe ingredients and were preformed using Pandas
 
-# Modeling Sales
+- Remove all words after first comma 
+- Define list of ingredient amounts and noise words
+- Remove all words in list and words that are not .isalpha()
+- Remove all adverbs and past tense, present participle, and past participle verbs; lemnmatize
+ 
+
+# 5. Build Reccomender System:
 
 **Step 1 : Selecting Model**
 - Run random forest
