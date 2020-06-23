@@ -133,7 +133,7 @@ In this step, I explore and visualize diet labels using plotly and seaborn
 
 In this step, I explore and visualize diet labels using seaborn
 
-<img src="Images/Health_labels.png"></img>
+<img src="Images/Health_labels.png" width="700" height="400"></img>
 
 ### Conclusion: 'Alcohol-Free', 'Peanut-Free', and 'Tree-Nut-Free' are the most frequently occuring diet labels. 
 
