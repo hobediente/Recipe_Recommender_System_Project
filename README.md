@@ -133,7 +133,7 @@ In this step, I explore and visualize diet labels using plotly and seaborn
 
 In this step, I explore and visualize diet labels using seaborn
 
-<img src="Images/Health_labels_pie.png"></img>
+<img src="Images/Health_labels_pie.png" width="500" height="300"></img>
 
 ### Conclusion: 'Alcohol-Free', 'Peanut-Free', and 'Tree-Nut-Free' are the most frequently occuring diet labels. 
 
@@ -149,7 +149,7 @@ In this step, I preformed the following using pandas functionalities
 
 In this step, I visualized the previous findings using ploty.express
 
-<img src="Images/word_cloud.png" width="600" height="600"></img>
+<img src="Images/word_cloud.png"></img>
 
 ### Conclusion: Sales are highly correlated to the percent of educated population under 25.
 
