@@ -38,6 +38,8 @@ In this step I build a system that reccomends recipes from my dataset that come 
 The following steps were preformed using Python functionalities
 
 - Load Kaggle Dataset
+<img src="Images/Kaggle_df.png"></img>
+
 - Tokenize recipe names for 1 and 2 grams
 - Get most common words 
 - Store select words in a list
@@ -116,11 +118,13 @@ In this step, I visualize the previous findings using plotly.express
 
 In this step, I explore and visualize diet labels using plotly and seaborn
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
+<img src="Images/Diet_labels.png"></img>
+
 
 ### Conclusion: Most recipes have no diet labels; ['High-Protien', 'Low-Carb'] tags are often used together. 
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
+<img src="Images/Diet_labels_pie.png"></img>
+
 
 ### Conclusion: 'Low-Carb' is the most frequently occuring diet label, and 'High-Protien' is the least frequently occuring diet label. 
 
@@ -129,7 +133,7 @@ In this step, I explore and visualize diet labels using plotly and seaborn
 
 In this step, I explore and visualize diet labels using seaborn
 
-<img src="https://github.com/hobediente/Liquor_Sales_Supervised_Learning_Project/blob/master/Images/2018_Category_Sales.png" width="740" height="300"></img>
+<img src="Images/Health_labels_pie.png"></img>
 
 ### Conclusion: 'Alcohol-Free', 'Peanut-Free', and 'Tree-Nut-Free' are the most frequently occuring diet labels. 
 
@@ -196,3 +200,5 @@ The following steps use NLP to clean recipe ingredients and were preformed using
 - Run and test more queries with different distance metrics
 - Add more recipes to df (esp. 'High-Protien')
 - Explore deploying with Flask
+
+width="740" height="300"
